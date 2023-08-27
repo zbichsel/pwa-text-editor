@@ -25,7 +25,7 @@ module.exports = () => {
 
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
+        swDest: './dest-sw.js',
       }),
 
       new WebpackPwaManifest({
@@ -63,7 +63,7 @@ module.exports = () => {
           },
         },
         {
-          test: /\.css$/,
+          test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
       ],
